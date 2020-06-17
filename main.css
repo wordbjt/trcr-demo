@@ -9,6 +9,16 @@
       padding: 0;
     }
 
+    h3 {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 5px;
+      margin-bottom: 10px;     
+    }
+   
+    p {
+      font-size: 12px;   
+    }
+
     body {
       background: #eee;
       color: var(--purple);
@@ -26,7 +36,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
+      text-align: left;
       width: 350px;
       min-height: 300px;
       margin: 0 auto;
