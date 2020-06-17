@@ -20,7 +20,7 @@
     font-size: 15px;
     }
     
-    p.description {
+    p#description {
     font-size: 12px;
     margin-top: 5px;
     margin-bottom: 20px;
@@ -113,8 +113,8 @@
   <div class="form-container">
     <div id="logo"><img src="https://raw.githubusercontent.com/wordbjt/trcr-demo/master/Your_Logo.png"></div>
     
-    <h2>Visitor Form for Contact Tracing</h2>
-    <p class="description">
+    <h2 id="header-title">Visitor Form for Contact Tracing</h2>
+    <p id="description">
       In an effort to help control and manage the spread of COVID-19, all visitors must submit the this form before entering this establishment.
     </p>
     
@@ -197,6 +197,8 @@
     const errorMessage = document.querySelector('.js-error-message')
     
     var logo = document.getElementById('logo')
+    var headerTitle = document.getElementById('header-title')
+    var description = document.getElementById('description')
 
     form.addEventListener('submit', e => {
       e.preventDefault()
@@ -210,6 +212,8 @@
     function showLoadingIndicator () {
       form.classList.add('is-hidden')
       logo.classList.add('is-hidden')
+      headerTitle.classList.add('is-hidden')
+      description.classList.add('is-hidden')      
       loading.classList.remove('is-hidden')
     }
 
@@ -226,6 +230,9 @@
       console.error('Error!', error.message)
       setTimeout(() => {
         errorMessage.classList.remove('is-hidden')
+        logo.classList.add('is-hidden')
+        headerTitle.classList.add('is-hidden')
+        description.classList.add('is-hidden')         
         loading.classList.add('is-hidden')
       }, 500)
     }
