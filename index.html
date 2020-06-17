@@ -192,15 +192,8 @@
     }
   </script>
   
-  <script language="JavaScript">
-    function showInput() {
-        document.getElementById('display-name').innerHTML = 
-                    document.getElementById("full-name").value;
-    }
-  </script>
-
 <script>
-  
+    
 var dt = new Date();
 
 // ensure date comes as 01, 09 etc
@@ -220,9 +213,17 @@ var ss = ("0" + dt.getSeconds()).slice(-2);
 var date_string = YYYY + "-" + MM + "-" + DD + " " + hh + ":" + mm + ":" + ss;
 
 // will output something like "2019-02-14 11:04:42"
-console.log(date_string);
-   
+console.log(date_string);    
+    
+    function showInput() {
+        document.getElementById('display-name').innerHTML = 
+                    document.getElementById("full-name").value;
+      
+        document.getElementById('display-date').innerHTML = date_string;     
+    }
+  
 </script>
+
 
 </body>
 </html>
