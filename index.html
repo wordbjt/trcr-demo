@@ -92,7 +92,7 @@
       
       <h3>Visitor Information</h3>
       <label for="name">Full Name:</label>
-      <input name="name" type="text" placeholder="Full Name" required>
+      <input name="name" type="text" placeholder="Full Name" id="full-name" required>
       
       <label for="address">Address:</label>
       <input name="address" type="text" placeholder="Address" required>
@@ -135,8 +135,11 @@
       <h3>You're all set!</h3>
       <p>Please present this confirmation for entry.</p>
       <img src="https://raw.githubusercontent.com/wordbjt/trcr-demo/master/confirmed.png">
+      <span id="display"></span>
     </div>
+    
     <p class="js-error-message is-hidden">Error!</p>
+    
   </div>
 
   <!--<a href="https://docs.google.com/spreadsheets/d/16vDPkBwtMNNMzgbmKfxfOEqGZhtfJha097ZKB23dZdc/edit?usp=sharing" target="_blank">View the Google Sheet</a>
@@ -180,6 +183,13 @@
         errorMessage.classList.remove('is-hidden')
         loading.classList.add('is-hidden')
       }, 500)
+    }
+  </script>
+  
+  <script language="JavaScript">
+    function showInput() {
+        document.getElementById('display').innerHTML = 
+                    document.getElementById("full-name").value;
     }
   </script>
 
