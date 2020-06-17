@@ -19,10 +19,33 @@
 
   <div class="form-container">
     <form name="submit-to-google-sheet">
+      
+      <h3>Health Information</h3>
+      <label for="temperature">Temperature:</label>
+      <input name="temperature" type="number" step="any" required>
+      
+      <label for="symptoms">Are you experiencing any COVID-19 Symptoms?</label>
+        <p>Fever, Sore throat, Diarrhea, Shortness of breath</p>
+        <select id="symptoms" name="symptoms" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      
+      <h3>Visitor Information</h3>
+      <label for="name">Full Name:</label>
+      <input name="name" type="text" placeholder="Full Name" required>
+      
+      <label for="address">Address:</label>
+      <input name="address" type="text" placeholder="Address" required>
+      
+      <label for="email">Email Address:</label>
       <input name="email" type="email" placeholder="Email" required>
-      <input name="firstName" type="text" placeholder="First Name">
-      <input name="lastName" type="text" placeholder="Last Name">
-      <button type="submit">Subscribe</button>
+      
+      <label for="phone">Phone Number:</label>
+      <input name="phone" type="number" placeholder="Phone Number" required>
+      
+      <button type="submit">Submit</button>
+      
     </form>
 
     <div class="loading js-loading is-hidden">
