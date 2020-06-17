@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>TRCR Demo</title>
-  <meta name="description" content="TRCR Demo">
+  <meta name="description" content="TRCR - Demo">
   
   <style>
     
@@ -76,6 +76,7 @@
     #additional-visitor {
       font-size: 12px;
       text-align:center; 
+      margin-top: 20px;
     }
     
   </style>
@@ -94,6 +95,12 @@
 
   <div class="form-container">
     <div id="logo"><img src="https://raw.githubusercontent.com/wordbjt/trcr-demo/master/Your_Logo.png"></div>
+    
+    <h2>Visitor Form for Contact Tracing</h2>
+    <p class="description">
+      In an effort to help control and manage the spread of COVID-19, all visitors must submit the this form before entering this establishment.
+    </p>
+    
     <form name="submit-to-google-sheet">
       
       <h3>Health Information</h3>
@@ -153,7 +160,9 @@
       <img src="https://raw.githubusercontent.com/wordbjt/trcr-demo/master/confirmed.png">
       <span id="display-name"></span>
       <span id="display-date"></span>
+     
       <a id="additional-visitor" href="/">Submit form for an additional visitor.</a>
+      
     </div>
     
     <p class="js-error-message is-hidden">Error!</p>
