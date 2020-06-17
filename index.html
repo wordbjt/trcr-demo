@@ -49,6 +49,10 @@
      margin-bottom: 10px;
     }
     
+    .js-success-message {
+      text-align: center;
+    }
+    
     .js-success-message img {
       width: 100%;
       max-width: 180px;
@@ -165,6 +169,7 @@
       console.log('Success!', response)
       setTimeout(() => {
         successMessage.classList.remove('is-hidden')
+        logo.classList.remove('is-hidden')
         loading.classList.add('is-hidden')
       }, 500)
     }
