@@ -142,7 +142,7 @@
       <em>*All fields are required</em>
     </p>
     
-    <form name="submit-to-storage">
+    <form id="trcr-form" name="submit-to-storage">
       
       <h3>Health Information</h3>
       <label for="temperature">Temperature:</label>
@@ -206,6 +206,11 @@
       
     </div>
     
+    <div id="check-out" class="is-hidden">
+      <p>Don't forget to check out when you leave!</p>
+      <button type="submit" form="trcr-form">Check Out</button>
+    </div>
+    
     <p class="js-error-message is-hidden">Error!</p>
     
   </div>
@@ -220,6 +225,7 @@
     var logo = document.getElementById('logo')
     var headerTitle = document.getElementById('header-title')
     var description = document.getElementById('description')
+    var checkout = document.getElementById('check-out')
 
     form.addEventListener('submit', e => {
       e.preventDefault()
@@ -234,7 +240,8 @@
       form.classList.add('is-hidden')
       logo.classList.add('is-hidden')
       headerTitle.classList.add('is-hidden')
-      description.classList.add('is-hidden')      
+      description.classList.add('is-hidden')
+      checkout.classList.add('is-hidden')
       loading.classList.remove('is-hidden')
     }
 
@@ -243,6 +250,7 @@
       setTimeout(() => {
         successMessage.classList.remove('is-hidden')
         logo.classList.remove('is-hidden')
+        checkout.classList.remove('is-hidden')
         headerTitle.classList.add('is-hidden')
         description.classList.add('is-hidden')          
         loading.classList.add('is-hidden')
@@ -255,7 +263,8 @@
         errorMessage.classList.remove('is-hidden')
         logo.classList.add('is-hidden')
         headerTitle.classList.add('is-hidden')
-        description.classList.add('is-hidden')         
+        description.classList.add('is-hidden') 
+        checkout.classList.add('is-hidden')
         loading.classList.add('is-hidden')
       }, 500)
     }
