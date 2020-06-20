@@ -179,10 +179,10 @@
       <input name="zip-code" type="text" placeholder="Zip Code" required>
       
       <label for="email">Email Address:</label>
-      <input name="email" type="email" placeholder="Email" class="form-input" required>
+      <input name="email" type="email" placeholder="Email" id="email" class="form-input" required>
       
       <label for="phone">Phone Number:</label>
-      <input name="phone" type="tel" placeholder="Phone Number" class="form-input" required>
+      <input name="phone" type="tel" placeholder="Phone Number" id="phone" class="form-input" required>
       
       <h3>Privacy & Consent</h3>
       <p class="privacy-text">
@@ -338,11 +338,22 @@ $("input[name='phone']").val(localStorage['phone']);
 }
 });
 
-$("#save-info").change(function(){
-if($(this).is(":checked")) {
-localStorage.setItem($(this).attr("name") , $(this).val()); 
+
+
+document.querySelector('form').onsubmit = function(e) {
+e.preventDefault();
+    
+var name = document.querySelector('#full-name').value;
+var email = document.querySelector('#email').value;
+var phone = document.querySelector('#phone').value;
+    
+localStorage["name"] = name;
+localStorage["email"] = email;
+localStorage["phone"] = phone;
+    
+console.log(localStorage);
 }
-});
+  
   
 //$('#additional-visitor').click(function() {  
 //localStorage.clear(); 
@@ -353,7 +364,7 @@ localStorage.setItem($(this).attr("name") , $(this).val());
   
 <!--  
 <script>
-  $("#remember_me").change(function(){
+$("#save-info").change(function(){
 if($(this).is(":checked")) {
         if (localStorage['name']) {
 $("input[name='name']").val(localStorage['name']);
@@ -371,41 +382,8 @@ localStorage.setItem($(this).attr("name") , $(this).val());
 });
 </script>  -->
   
-  
-  <!--
-        <script>
 
-             $(function() {
-       
-                if (localStorage.chkbx && localStorage.chkbx != '') {
-                    $('#remember_me').attr('checked', 'checked');
-                    $('#full-name').val(localStorage.usrname);
-                    // $('#xip_Password').val(localStorage.pass);
-                } else {
-                    $('#remember_me').removeAttr('checked');
-                    $('#full-name').val('');
-                   // $('#xip_Password').val('');
-                }
- 
-               // $('#remember_me').click(function() {
-               
-               $('#trcr-form').on('submit', function() {
- 
-                    if ($('#remember_me').is(':checked')) {
-                        // save username and password
-                        localStorage.usrname = $('#full-namee').val();
-                       // localStorage.pass = $('#xip_Password').val();
-                        localStorage.chkbx = $('#remember_me').val();
-                    } else {
-                        localStorage.usrname = '';
-                       // localStorage.pass = '';
-                        localStorage.chkbx = '';
-                    }
-                });
-            });
- 
-        </script>  
--->
+
   
 
 </body>
