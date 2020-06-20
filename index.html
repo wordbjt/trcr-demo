@@ -167,7 +167,7 @@
       
       <h3>Contact Details</h3>
       <label for="name">Full Name:</label>
-      <input name="name" type="text" placeholder="Full Name" id="full-name" required>
+      <input name="name" type="text" placeholder="Full Name" id="full-name" class="form-input" required>
       
       <label for="address">Address:</label>
       <input name="address" type="text" placeholder="Address" required>
@@ -179,10 +179,10 @@
       <input name="zip-code" type="text" placeholder="Zip Code" required>
       
       <label for="email">Email Address:</label>
-      <input name="email" type="email" placeholder="Email" required>
+      <input name="email" type="email" placeholder="Email" class="form-input" required>
       
       <label for="phone">Phone Number:</label>
-      <input name="phone" type="tel" placeholder="Phone Number" required>
+      <input name="phone" type="tel" placeholder="Phone Number" class="form-input" required>
       
       <h3>Privacy & Consent</h3>
       <p class="privacy-text">
@@ -323,8 +323,29 @@ console.log(date_string);
   
 </script>
   
+<script>
+  $("#remember_me").change(function(){
+if($(this).is(":checked")) {
+        if (localStorage['name']) {
+$("input[name='name']").val(localStorage['name']);
+}
+if (localStorage['email']) {
+$("input[name='email']").val(localStorage['email']);
+}
+if (localStorage['phone']) {
+$("input[name='phone']").val(localStorage['phone']);
+}
+}
+});
+$(".form-input").on("change",function () {
+localStorage.setItem($(this).attr("name") , $(this).val());
+});
+</script>  
+  
+  
+  <!--
         <script>
-          
+
              $(function() {
        
                 if (localStorage.chkbx && localStorage.chkbx != '') {
@@ -355,6 +376,7 @@ console.log(date_string);
             });
  
         </script>  
+-->
   
 
 </body>
