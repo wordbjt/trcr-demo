@@ -324,6 +324,61 @@ console.log(date_string);
 </script>
   
 <script>
+
+$(function() {
+
+if (localStorage['name']) {
+$("input[name='name']").val(localStorage['name']);
+}
+if (localStorage['email']) {
+$("input[name='email']").val(localStorage['email']);
+}
+if (localStorage['phone']) {
+$("input[name='phone']").val(localStorage['phone']);
+}
+});
+
+  
+$('#trcr-form').on('submit', function() {
+
+// save username and password
+
+if ($('#remember_me').is(':checked')) {
+    if($(this).is(":checked")) {
+        if (localStorage['name']) {
+            $("input[name='name']").val(localStorage['name']);
+            }
+        if (localStorage['email']) {
+            $("input[name='email']").val(localStorage['email']);
+            }
+        if (localStorage['phone']) {
+            $("input[name='phone']").val(localStorage['phone']);
+            }
+        }
+    }
+            
+    else {
+
+        if (localStorage['name']) {
+            $("input[name='name']").val('');
+            }
+        if (localStorage['email']) {
+            $("input[name='email']").val('');
+            }
+        if (localStorage['phone']) {
+            $("input[name='phone']").val('');
+            }
+
+        }
+
+});
+  
+</script>  
+  
+  
+  
+<!--  
+<script>
   $("#remember_me").change(function(){
 if($(this).is(":checked")) {
         if (localStorage['name']) {
@@ -340,7 +395,7 @@ $("input[name='phone']").val(localStorage['phone']);
 $(".form-input").on("change",function () {
 localStorage.setItem($(this).attr("name") , $(this).val());
 });
-</script>  
+</script>  -->
   
   
   <!--
