@@ -338,8 +338,9 @@ $("input[name='phone']").val(localStorage['phone']);
 }
   
 });
-
-        $('input#save-info]').click(function(){
+  
+//$(document).ready(function(){
+        $('input#save-info').click(function(){
             if($(this).is(":checked")){
                 console.log("Checkbox is checked.");
             }
@@ -347,6 +348,7 @@ $("input[name='phone']").val(localStorage['phone']);
                 console.log("Checkbox is unchecked.");
             }
         });  
+//});
   
 // SET
 // document.querySelector('form').onsubmit = function(e) {
