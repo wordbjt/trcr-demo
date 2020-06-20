@@ -204,6 +204,8 @@
       <hr>
       <br>
       
+      <input type="hidden" name="type" value="check-in">
+      
       <button type="submit" id="submit-button">Check-in</button>
       
     </form>
@@ -225,13 +227,12 @@
       
     </div>
     
-    <!--
+    
     <div id="check-out" class="is-hidden">
       <p>Don't forget to check out when you leave!</p>
-      <button type="submit" form="trcr-form">Check Out</button>
+      <button type="submit" form="trcr-form" id="check-out-button">Check Out</button>
     </div>
-    -->
-    
+   
     
     <p class="js-error-message is-hidden">Error!</p>
     
@@ -291,6 +292,11 @@
       }, 500)
     }
   </script>
+  
+  <!-- BUTTON CHANGE HIDDEN INPUT VALUE -->
+ // <script>
+ // $("input[name='type']").val('check-out');
+ // </script>
   
 <script>
     
@@ -365,29 +371,6 @@ localStorage.clear();
 }); 
 </script>
   
-  
-  
-<!--  
-<script>
-$("#save-info").change(function(){
-if($(this).is(":checked")) {
-        if (localStorage['name']) {
-$("input[name='name']").val(localStorage['name']);
-}
-if (localStorage['email']) {
-$("input[name='email']").val(localStorage['email']);
-}
-if (localStorage['phone']) {
-$("input[name='phone']").val(localStorage['phone']);
-}
-}
-});
-$(".form-input").on("change",function () {
-localStorage.setItem($(this).attr("name") , $(this).val());
-});
-</script>  -->
-  
-
 
   
 
