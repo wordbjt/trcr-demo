@@ -248,8 +248,7 @@
     var logo = document.getElementById('logo')
     var headerTitle = document.getElementById('header-title')
     var description = document.getElementById('description')
-    var type = document.getElementById('type').value;
-    // var checkout = document.getElementById('check-out')
+    var checkout = document.getElementById('check-out')
 
     form.addEventListener('submit', e => {
       e.preventDefault()
@@ -265,7 +264,7 @@
       logo.classList.add('is-hidden')
       headerTitle.classList.add('is-hidden')
       description.classList.add('is-hidden')
-      // checkout.classList.add('is-hidden')
+      checkout.classList.add('is-hidden')
       loading.classList.remove('is-hidden')
     }
 
@@ -274,8 +273,7 @@
       setTimeout(() => {
         successMessage.classList.remove('is-hidden')
         logo.classList.remove('is-hidden')
-        type.val('check-out')
-        // checkout.classList.remove('is-hidden')
+        checkout.classList.remove('is-hidden')
         headerTitle.classList.add('is-hidden')
         description.classList.add('is-hidden')          
         loading.classList.add('is-hidden')
@@ -289,7 +287,7 @@
         logo.classList.add('is-hidden')
         headerTitle.classList.add('is-hidden')
         description.classList.add('is-hidden') 
-        // checkout.classList.add('is-hidden')
+        checkout.classList.add('is-hidden')
         loading.classList.add('is-hidden')
       }, 500)
     }
