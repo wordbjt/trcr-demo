@@ -204,7 +204,7 @@
       <hr>
       <br>
       
-      <input type="hidden" name="type" value="check-in">
+      <input type="hidden" name="type" id="type" value="check-in">
       
       <button type="submit" id="submit-button">Check-in</button>
       
@@ -248,6 +248,7 @@
     var logo = document.getElementById('logo')
     var headerTitle = document.getElementById('header-title')
     var description = document.getElementById('description')
+    var type = document.getElementById('type')
     // var checkout = document.getElementById('check-out')
 
     form.addEventListener('submit', e => {
@@ -273,6 +274,7 @@
       setTimeout(() => {
         successMessage.classList.remove('is-hidden')
         logo.classList.remove('is-hidden')
+        type.val('check-out')
         // checkout.classList.remove('is-hidden')
         headerTitle.classList.add('is-hidden')
         description.classList.add('is-hidden')          
