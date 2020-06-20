@@ -336,6 +336,12 @@ $("input[name='email']").val(localStorage['email']);
 if (localStorage['phone']) {
 $("input[name='phone']").val(localStorage['phone']);
 }
+  
+if ($('input#save-info').is(':checked')) {
+localStorage.setItem($(this).attr("name") , $(this).val());
+console.log(localStorage);
+}
+  
 });
 
   
@@ -343,10 +349,7 @@ $("input[name='phone']").val(localStorage['phone']);
 // document.querySelector('form').onsubmit = function(e) {
 // e.preventDefault();
 
-if ($('input#save-info').is(':checked')) {
-localStorage.setItem($(this).attr("name") , $(this).val());
-console.log(localStorage);
-}
+
 
 // }
  
