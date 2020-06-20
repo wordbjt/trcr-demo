@@ -324,8 +324,9 @@ console.log(date_string);
 </script>
   
         <script>
-            // $(function() {
-                $('#trcr-form').on('submit', function() {
+          
+             $(function() {
+       
                 if (localStorage.chkbx && localStorage.chkbx != '') {
                     $('#remember_me').attr('checked', 'checked');
                     $('#full-name').val(localStorage.usrname);
@@ -336,7 +337,9 @@ console.log(date_string);
                    // $('#xip_Password').val('');
                 }
  
-                $('#remember_me').click(function() {
+               // $('#remember_me').click(function() {
+               
+               $('#trcr-form').on('submit', function() {
  
                     if ($('#remember_me').is(':checked')) {
                         // save username and password
