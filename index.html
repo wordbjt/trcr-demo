@@ -198,7 +198,7 @@
       <br>
       
       <label class="checkbox">
-        <input type="checkbox" value="remember-me" id="remember_me"> Remember me
+        <input type="checkbox" value="save-info" id="save-info"> Remember me
       </label>
       
       <hr>
@@ -338,12 +338,9 @@ $("input[name='phone']").val(localStorage['phone']);
 }
 });
 
-$("#remember_me").change(function(){
+$("#save-info").change(function(){
 if($(this).is(":checked")) {
 localStorage.setItem($(this).attr("name") , $(this).val()); 
-} else
-{
-localStorage.setItem = '';
 }
 });
   
