@@ -319,6 +319,37 @@ console.log(date_string);
     }
   
 </script>
+  
+        <script>
+            $(function() {
+ 
+                if (localStorage.chkbx && localStorage.chkbx != '') {
+                    $('#remember_me').attr('checked', 'checked');
+                    $('#full-name').val(localStorage.usrname);
+                    // $('#xip_Password').val(localStorage.pass);
+                } else {
+                    $('#remember_me').removeAttr('checked');
+                    $('#full-name').val('');
+                   // $('#xip_Password').val('');
+                }
+ 
+                $('#remember_me').click(function() {
+ 
+                    if ($('#remember_me').is(':checked')) {
+                        // save username and password
+                        localStorage.usrname = $('#full-namee').val();
+                       // localStorage.pass = $('#xip_Password').val();
+                        localStorage.chkbx = $('#remember_me').val();
+                    } else {
+                        localStorage.usrname = '';
+                       // localStorage.pass = '';
+                        localStorage.chkbx = '';
+                    }
+                });
+            });
+ 
+        </script>  
+  
 
 </body>
 </html>
