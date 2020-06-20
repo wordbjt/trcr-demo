@@ -344,11 +344,12 @@ $("input[name='phone']").val(localStorage['phone']);
  
         $('input#save-info').click(function(){
             if($(this).is(":checked")){
-                  $('input[type="text"]').each(function(){    
-                  var id = $(this).attr('id');
+                  $('input.form-input').each(function(){    
+                  var name = $(this).attr('name');
                   var value = $(this).val();
-                  localStorage.setItem(id, value);
+                  localStorage.setItem(name, value);
                   console.log("Checkbox is checked.");
+                  });
             }
             else if($(this).is(":not(:checked)")){
                //  localStorage.clear();    
