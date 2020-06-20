@@ -220,7 +220,7 @@
       <img src="https://raw.githubusercontent.com/wordbjt/trcr-demo/master/confirmed.png">
       <span id="display-name"></span>
       <span id="display-date"></span>
-     
+      
       <a id="additional-visitor" href="/">Submit form for an additional visitor.</a>
       
     </div>
@@ -231,6 +231,7 @@
       <button type="submit" form="trcr-form">Check Out</button>
     </div>
     -->
+    
     
     <p class="js-error-message is-hidden">Error!</p>
     
@@ -323,7 +324,6 @@ console.log(date_string);
   
 </script>
   
-  
 <script>
 $(function() {
 
@@ -340,17 +340,14 @@ $("input[name='phone']").val(localStorage['phone']);
 
   
 // SET
-  
+if ($('input#save-info').is(':checked')) {  
 document.querySelector('form').onsubmit = function(e) {
 e.preventDefault();
     
-$("#save-info").change(function(){
-if($(this).is(":checked")) {
 localStorage.setItem($(this).attr("name") , $(this).val());
-}
-});
-    
+
 console.log(localStorage);
+}
 }
  
   
