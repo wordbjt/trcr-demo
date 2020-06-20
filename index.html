@@ -338,29 +338,24 @@ $("input[name='phone']").val(localStorage['phone']);
 }
   
 });
+
   
-//$(document).ready(function(){
+// SET
+ 
         $('input#save-info').click(function(){
             if($(this).is(":checked")){
-                localStorage.setItem($(this).attr("name") , $(this).val());
-                console.log("Checkbox is checked.");
+                  $('input[type="text"]').each(function(){    
+                  var id = $(this).attr('id');
+                  var value = $(this).val();
+                  localStorage.setItem(id, value);
+                  console.log("Checkbox is checked.");
             }
             else if($(this).is(":not(:checked)")){
+               //  localStorage.clear();    
                 console.log("Checkbox is unchecked.");
             }
         });  
-//});
-  
-// SET
-// document.querySelector('form').onsubmit = function(e) {
-// e.preventDefault();
 
-// if ($('input#save-info').is(':checked')) {
-// localStorage.setItem($(this).attr("name") , $(this).val());
-// console.log(localStorage);
-// }
-
-// }
   
 //CLEAR 
   
