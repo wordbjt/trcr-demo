@@ -223,7 +223,7 @@
       <span id="display-name"></span>
       <span id="display-date"></span>
       
-      <a id="additional-visitor" href="/">Submit form for an additional visitor.</a>
+      <!-- <a id="additional-visitor" href="/">Submit form for an additional visitor.</a> -->
       
     </div>
     
@@ -243,6 +243,7 @@
     const form = document.forms['submit-to-storage']  
     const loading = document.querySelector('.js-loading')
     const successMessage = document.querySelector('.js-success-message')
+    // const checkOutsuccessMessage = document.querySelector('.js-check-out-success-message')
     const errorMessage = document.querySelector('.js-error-message')
     
     var logo = document.getElementById('logo')
@@ -279,7 +280,7 @@
         loading.classList.add('is-hidden')
       }, 500)
     }
-
+      
     function showErrorMessage (error) {
       console.error('Error!', error.message)
       setTimeout(() => {
@@ -365,13 +366,11 @@ $("input[name='phone']").val(localStorage['phone']);
 
   
 //CLEAR 
+// $('#additional-visitor').click(function() {  
+// localStorage.clear(); 
+// }); 
   
-$('#additional-visitor').click(function() {  
-localStorage.clear(); 
-}); 
 </script>
-  
-
   
 
 </body>
