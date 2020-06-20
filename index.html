@@ -340,15 +340,15 @@ $("input[name='phone']").val(localStorage['phone']);
 
   
 // SET
-document.querySelector('form').onsubmit = function(e) {
-e.preventDefault();
+// document.querySelector('form').onsubmit = function(e) {
+// e.preventDefault();
 
 if ($('input#save-info').is(':checked')) {
 localStorage.setItem($(this).attr("name") , $(this).val());
 console.log(localStorage);
 }
 
-}
+// }
  
   
 //CLEAR 
