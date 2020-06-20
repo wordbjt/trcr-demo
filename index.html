@@ -337,7 +337,7 @@ $("input[name='phone']").val(localStorage['phone']);
 }
 });
 
-$('#trcr-form').on('submit', function() {
+$("#trcr-form").on('submit', function() {
 if ($('#remember_me').is(':checked')) {
 localStorage.setItem($(this).attr("name") , $(this).val());
 } else
