@@ -324,8 +324,8 @@ console.log(date_string);
 </script>
   
         <script>
-            $(function() {
- 
+            // $(function() {
+                $('#trcr-form').on('submit', function() {
                 if (localStorage.chkbx && localStorage.chkbx != '') {
                     $('#remember_me').attr('checked', 'checked');
                     $('#full-name').val(localStorage.usrname);
