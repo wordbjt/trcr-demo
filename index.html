@@ -198,7 +198,7 @@
       <br>
       
       <label class="checkbox">
-        <input type="checkbox" value="save-info" id="save-info"> Remember me
+        <input type="checkbox" value="save-info" id="save-info"> Save my details
       </label>
       
       <hr>
@@ -352,7 +352,7 @@ $("input[name='phone']").val(localStorage['phone']);
                   });
             }
             else if($(this).is(":not(:checked)")){
-               //  localStorage.clear();    
+                localStorage.clear();    
                 console.log("Checkbox is unchecked.");
             }
         });  
