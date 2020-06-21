@@ -7,8 +7,18 @@
   <title>TRCR - Demo</title>
   <meta name="description" content="TRCR - Demo">
   
-  <style>
+<style>
     
+.row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+}
+  
     h1 {
     font-size: 18px;
     text-transform: uppercase;
@@ -56,6 +66,7 @@
       font-family: 'Gothic A1', sans-serif;
       font-size: 12px;
       font-weight: 600;
+      text-transform: uppercase;
     }
     
     p {
@@ -118,6 +129,8 @@
     }
     
     #temperatureOutput {
+     font-size: 30px;
+     font-weight: 900;
      display: inline-block; 
     }
     
@@ -211,17 +224,7 @@
       text-align:center; 
       margin-top: 20px;
     }
- 
-.row {
-  display: flex;
-}
 
-/* Create two equal columns that sits next to each other */
-.column {
-  flex: 50%;
-  padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
-}    
     
 /* CUSTOM RANGE INPUT */
     
