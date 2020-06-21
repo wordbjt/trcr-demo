@@ -297,11 +297,12 @@ input[type=range]:focus::-ms-fill-upper {
     </div>
     
     <h2 id="header-title">Visitor Form for Contact Tracing</h2>
-    <p id="description">
+    
+    <!-- <p id="description">
       In an effort to help control and manage the spread of COVID-19, all visitors must complete and submit this form before entering this establishment.
     <br><br>
       <em>*All fields are required</em>
-    </p>
+    </p> -->
     
     <form id="trcr-form" name="submit-to-storage">
       
@@ -412,7 +413,7 @@ input[type=range]:focus::-ms-fill-upper {
     
     var logo = document.getElementById('logo')
     var headerTitle = document.getElementById('header-title')
-    var description = document.getElementById('description')
+    // var description = document.getElementById('description')
     var checkinBar = document.getElementById('check-in-bar')
     var checkout = document.getElementById('check-out')
     var checkoutBar = document.getElementById('check-out-bar')
@@ -446,7 +447,7 @@ input[type=range]:focus::-ms-fill-upper {
       form.classList.add('is-hidden')
       logo.classList.add('is-hidden')
       headerTitle.classList.add('is-hidden')
-      description.classList.add('is-hidden')
+      // description.classList.add('is-hidden')
       checkout.classList.add('is-hidden')
       loading.classList.remove('is-hidden')
     }
@@ -461,7 +462,7 @@ input[type=range]:focus::-ms-fill-upper {
         logo.classList.remove('is-hidden')
         checkout.classList.remove('is-hidden')
         headerTitle.classList.add('is-hidden')
-        description.classList.add('is-hidden')          
+        // description.classList.add('is-hidden')          
         loading.classList.add('is-hidden')
       }, 500)
     }
@@ -476,7 +477,7 @@ input[type=range]:focus::-ms-fill-upper {
         logo.classList.remove('is-hidden')
         checkout.classList.add('is-hidden')
         headerTitle.classList.add('is-hidden')
-        description.classList.add('is-hidden')          
+        // description.classList.add('is-hidden')          
         loading.classList.add('is-hidden')
       }, 500)
     }    
@@ -487,7 +488,7 @@ input[type=range]:focus::-ms-fill-upper {
         errorMessage.classList.remove('is-hidden')
         logo.classList.add('is-hidden')
         headerTitle.classList.add('is-hidden')
-        description.classList.add('is-hidden') 
+        // description.classList.add('is-hidden') 
         checkout.classList.add('is-hidden')
         loading.classList.add('is-hidden')
       }, 500)
