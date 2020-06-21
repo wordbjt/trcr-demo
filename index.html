@@ -181,11 +181,11 @@
 <h1>TRCR</h1>
 </header>
   
-  <div class="sucess-bar js-success-message is-hidden">
+  <div id="check-in-bar" class="sucess-bar js-success-message is-hidden">
     <p>Check-in sucessfull!</p>
   </div>
   
-  <div class="sucess-bar js-check-out-bar is-hidden">
+  <div id="check-out-bar" class="sucess-bar js-check-out-success-message is-hidden">
     <p>Check-out sucessfull!</p>
   </div>
 
@@ -301,7 +301,7 @@
     const form = document.forms['submit-to-storage']  
     const loading = document.querySelector('.js-loading')
     const successMessage = document.querySelector('.js-success-message')
-    // const checkOutsuccessMessage = document.querySelector('.js-check-out-success-message')
+    const checkOutsuccessMessage = document.querySelector('.js-check-out-success-message')
     const errorMessage = document.querySelector('.js-error-message')
     
     var logo = document.getElementById('logo')
@@ -359,6 +359,7 @@
       console.log('Success!', response)
       setTimeout(() => {
         successMessage.classList.add('is-hidden')
+        checkOutsuccessMessage.classList.remove('is-hidden')
         logo.classList.remove('is-hidden')
         checkout.classList.add('is-hidden')
         headerTitle.classList.add('is-hidden')
