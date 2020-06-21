@@ -258,14 +258,30 @@
     var headerTitle = document.getElementById('header-title')
     var description = document.getElementById('description')
     var checkout = document.getElementById('check-out')
-
+    
     form.addEventListener('submit', e => {
       e.preventDefault()
       showLoadingIndicator()
       showInput()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      
+      // CHECK IF CHECK-IN OR CHECK-OUT
+      
+      if ($('input#type').val() == 'check-in') {
+      
+        console.log("Check-in");
+        
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => showSuccessMessage(response))
         .catch(error => showErrorMessage(error))
+        
+    } else
+    
+        console.log("Check-out");
+      
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => showCheckOutMessage(response))
+        .catch(error => showErrorMessage(error))
+    
     })
 
     function showLoadingIndicator () {
@@ -288,6 +304,18 @@
         loading.classList.add('is-hidden')
       }, 500)
     }
+    
+    function showCheckOutMessage (response) {
+      console.log('Success!', response)
+      setTimeout(() => {
+        successMessage.classList.add('is-hidden')
+        logo.classList.remove('is-hidden')
+        checkout.classList.add('is-hidden')
+        headerTitle.classList.add('is-hidden')
+        description.classList.add('is-hidden')          
+        loading.classList.add('is-hidden')
+      }, 500)
+    }    
       
     function showErrorMessage (error) {
       console.error('Error!', error.message)
