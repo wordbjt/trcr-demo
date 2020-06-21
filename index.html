@@ -327,14 +327,14 @@
         .then(response => showSuccessMessage(response))
         .catch(error => showErrorMessage(error))
         
-    } else
+    } else {
     
         console.log("Check-out");
       
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => showCheckOutMessage(response))
         .catch(error => showErrorMessage(error))
-    
+    }
     })
 
     function showLoadingIndicator () {
