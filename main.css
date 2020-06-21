@@ -132,6 +132,7 @@
 
 /* CUSTOM CHECKBOX */
 
+/*
 #declare-checkbox label {
   display: inline-block;
   color: #fff;
@@ -217,3 +218,4 @@ input[type="checkbox"]:checked + label span:before {
   background: #1790b5;
   transition: width 150ms ease 100ms;
 }
+*/
