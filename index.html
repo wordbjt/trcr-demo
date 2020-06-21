@@ -344,15 +344,26 @@ input[type=range]:focus::-ms-fill-upper {
       <label for="phone">Phone Number:</label>
       <input name="phone" type="tel" placeholder="Phone Number" id="phone" class="form-input" required>
       
-      <h3>Privacy & Consent</h3>
-      <p class="privacy-text">
-      I understand that falsifying answers can result in being penalized in accordance with the law.
-      <br><br>
-      I consent to the collection and sharing of the above information for the purpose of controling the COVID-19 pandemic as required by R.A. 11469, Bayanihan to Heal as One Act.
-      </p>
+      <h3>Health Declaration & Consent</h3>
       
       <input name="privacy" type="checkbox" id="privacy"  value="Yes" required>
-      <label for="privacy"> Yes, I agree.</label>
+      <label for="privacy"> Yes, I agree to the following...</label>
+      
+      <p class="privacy-text">
+      <ul>
+        <li>You have not had close contact with a confirmed COVID-19 case in the past 14 days**</li>
+        <li>You are not currently under a quarantine order or stay home notice*</li>
+      <li>You do not have any fever or flu-like symptoms*</li>
+      <li>You accept the terms and consent to the collection/use of your information for COVID-19 contact tracing as required by R.A. 11469, Bayanihan to Heal as One Act.</li>
+      <li>I understand that falsifying answers can result in being penalized in accordance with the law.</li>
+      </ul>
+      <br><br>
+      *Not applicable if you are seeking treatment at a medical facility
+      <br>
+      **Not applicable to COVID-19 frontline workers
+      </p>
+      
+     
       
       <hr>
       <br>
