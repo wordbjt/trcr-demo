@@ -19,6 +19,11 @@
   padding: 10px;
 }
   
+.column.align-bottom {
+  justify-content: flex-end;
+  display: flex;  
+}
+  
     h1 {
     font-size: 18px;
     text-transform: uppercase;
@@ -116,11 +121,11 @@
     }
     
     #temperature-label {
-     display: inline-block; 
+     display: block; 
     }
     
     #temperature-wrapper {
-     display: inline-block; 
+     display: block; 
     }   
     
     input#temperature {
@@ -380,10 +385,10 @@ how to remove the virtical space around the range input in IE*/
       -->
       
       <div class="row">
-        <div class="column">
+        <div class="column align-bottom">
         <label id="temperature-label" for="temperature">Temperature:</label>
         </div>
-        <div class="column">
+        <div class="column align-bottom">
           <div id="temperature-wrapper">
             <output name="temperatureOutput" id="temperatureOutput">36.5</output><span> °C</span>
           </div>
