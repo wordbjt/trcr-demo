@@ -181,11 +181,11 @@
 <h1>TRCR</h1>
 </header>
   
-  <div id="check-in-bar" class="sucess-bar js-success-message is-hidden">
+  <div id="check-in-bar" class="sucess-bar js-success-bar is-hidden">
     <p>Check-in sucessfull!</p>
   </div>
   
-  <div id="check-out-bar" class="sucess-bar js-check-out-success-message is-hidden">
+  <div id="check-out-bar" class="sucess-bar js-check-out-success-bar is-hidden">
     <p>Check-out sucessfull!</p>
   </div>
 
@@ -307,7 +307,9 @@
     var logo = document.getElementById('logo')
     var headerTitle = document.getElementById('header-title')
     var description = document.getElementById('description')
+    var checkinBar = document.getElementById('check-in-bar')
     var checkout = document.getElementById('check-out')
+    var checkoutBar = document.getElementById('check-out-bar')
     
     form.addEventListener('submit', e => {
       e.preventDefault()
@@ -347,6 +349,7 @@
       console.log('Success!', response)
       setTimeout(() => {
         successMessage.classList.remove('is-hidden')
+        checkinBar.classList.remove('is-hidden')
         checkOutsuccessMessage.classList.add('is-hidden')
         logo.classList.remove('is-hidden')
         checkout.classList.remove('is-hidden')
@@ -360,7 +363,9 @@
       console.log('Success!', response)
       setTimeout(() => {
         successMessage.classList.add('is-hidden')
+        checkinBar.classList.add('is-hidden')
         checkOutsuccessMessage.classList.remove('is-hidden')
+        checkoutBar.classList.remove('is-hidden')
         logo.classList.remove('is-hidden')
         checkout.classList.add('is-hidden')
         headerTitle.classList.add('is-hidden')
