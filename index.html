@@ -276,13 +276,12 @@
       
     </div>
     
-    <div class="js-checkout-message is-hidden">
+    <div class="js-check-out-success-message is-hidden">
       <h3>See you soon!</h3>
       <p>Thanks and stay safe.</p>
       <img src="https://raw.githubusercontent.com/wordbjt/trcr-demo/master/confirmed.png">
       <span id="display-name"></span>
-      <span id="display-date"></span>
-           
+      <span id="display-date"></span>    
     </div>
     
     
@@ -301,7 +300,7 @@
     const form = document.forms['submit-to-storage']  
     const loading = document.querySelector('.js-loading')
     const successMessage = document.querySelector('.js-success-message')
-    const checkOutsuccessMessage = document.querySelector('.js-check-out-success-message')
+    const checkoutsuccessMessage = document.querySelector('.js-check-out-success-message')
     const errorMessage = document.querySelector('.js-error-message')
     
     var logo = document.getElementById('logo')
@@ -350,7 +349,7 @@
       setTimeout(() => {
         successMessage.classList.remove('is-hidden')
         checkinBar.classList.remove('is-hidden')
-        checkOutsuccessMessage.classList.add('is-hidden')
+        checkoutsuccessMessage.classList.add('is-hidden')
         logo.classList.remove('is-hidden')
         checkout.classList.remove('is-hidden')
         headerTitle.classList.add('is-hidden')
@@ -364,7 +363,7 @@
       setTimeout(() => {
         successMessage.classList.add('is-hidden')
         checkinBar.classList.add('is-hidden')
-        checkOutsuccessMessage.classList.remove('is-hidden')
+        checkoutsuccessMessage.classList.remove('is-hidden')
         checkoutBar.classList.remove('is-hidden')
         logo.classList.remove('is-hidden')
         checkout.classList.add('is-hidden')
