@@ -33,7 +33,7 @@
       position: relative;
       background: #fff;
       padding: 1.4rem;
-      border-radius: 3px;
+      border-radius: 2px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -51,7 +51,7 @@
       border: none;
       font-size: inherit;
       background: #eee;
-      border-radius: 3px;
+      border-radius: 2px;
       padding: 1rem;
       width: 100%;
     }
