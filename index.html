@@ -334,6 +334,35 @@ how to remove the virtical space around the range input in IE*/
     /*Edge starts the margin from the thumb, not the track as other browsers do*/
   }
 }
+  
+/* ELLIPSIS LOADING */
+  
+  
+ .ellipsis-loading {
+  font-size: 30px;
+}
+
+.ellipsis-loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;    
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;    
+  }
+}
     
     
 </style>
@@ -377,7 +406,7 @@ how to remove the virtical space around the range input in IE*/
     </div>-->
     
     <div id="logo">
-      <h2 id="header-title">Checking in to...</h2>
+      <div id="header-title" class="ellipsis-loading">Checking in to</div>
       <img src="https://raw.githubusercontent.com/wordbjt/trcr-demo/master/Your_Logo.png">
     </div>
 
