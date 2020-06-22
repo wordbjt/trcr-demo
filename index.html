@@ -528,7 +528,6 @@ how to remove the virtical space around the range input in IE*/
     const errorMessage = document.querySelector('.js-error-message')
     
     var businessName = document.getElementById('business-name-wrapper')
-    var headerTitle = document.getElementById('header-title')
     var checkinBar = document.getElementById('check-in-bar')
     var checkout = document.getElementById('check-out')
     var checkoutBar = document.getElementById('check-out-bar')
@@ -561,7 +560,6 @@ how to remove the virtical space around the range input in IE*/
     function showLoadingIndicator () {
       form.classList.add('is-hidden')
       businessName.classList.add('is-hidden')
-      headerTitle.classList.add('is-hidden')
       checkout.classList.add('is-hidden')
       loading.classList.remove('is-hidden')
     }
@@ -575,7 +573,6 @@ how to remove the virtical space around the range input in IE*/
         checkoutBar.classList.add('is-hidden')
         businessName.classList.remove('is-hidden')
         checkout.classList.remove('is-hidden')
-        headerTitle.classList.add('is-hidden')
         loading.classList.add('is-hidden')
       }, 500)
     }
@@ -589,7 +586,6 @@ how to remove the virtical space around the range input in IE*/
         checkoutBar.classList.remove('is-hidden')
         businessName.classList.remove('is-hidden')
         checkout.classList.add('is-hidden')
-        headerTitle.classList.add('is-hidden')
         loading.classList.add('is-hidden')
       }, 500)
     }    
@@ -599,7 +595,6 @@ how to remove the virtical space around the range input in IE*/
       setTimeout(() => {
         errorMessage.classList.remove('is-hidden')
         businessName.classList.add('is-hidden')
-        headerTitle.classList.add('is-hidden')
         checkout.classList.add('is-hidden')
         loading.classList.add('is-hidden')
       }, 500)
