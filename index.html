@@ -187,9 +187,15 @@
     }
   
     .row.save-info-wrapper .column.align-bottom {
-      justify-content: center;
+      justify-content: left;
       padding: 0px;
     }
+  
+  .row.save-info-wrapper .column.align-bottom.small-width {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 20%;
+  }
     
    /* .form-container input#save-info {
      -webkit-appearance: checkbox;
@@ -554,7 +560,7 @@ how to remove the virtical space around the range input in IE*/
         </label>-->      
       
       <div class="row save-info-wrapper">
-        <div class="column align-bottom"> 
+        <div class="column align-bottom small-width"> 
           <input class="tgl tgl-light" id="save-info" type="checkbox" value="save-info"/>
           <label class="tgl-btn" for="save-info"></label>
         </div>
