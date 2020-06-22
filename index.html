@@ -337,10 +337,15 @@ how to remove the virtical space around the range input in IE*/
   
 /* ELLIPSIS LOADING */
   
+  #header-title.ellipsis-loading {
+    font-size: 12px;
+    font-weight: 900;
+    text-align: left;
+  }
   
  .ellipsis-loading {
   font-size: 30px;
-}
+  }
 
 .ellipsis-loading:after {
   overflow: hidden;
@@ -405,9 +410,20 @@ how to remove the virtical space around the range input in IE*/
       <h3>Business Name</h3>
     </div>-->
     
-    <div id="logo">
-      <div id="header-title" class="ellipsis-loading">Checking in to</div>
-      <img src="https://raw.githubusercontent.com/wordbjt/trcr-demo/master/Your_Logo.png">
+    <div id="header-title" class="ellipsis-loading">Checking in to</div>
+    
+
+    
+    <div id="location">
+      
+      <div id="business-name">
+        <h2>Your Business Name Goes Here</h2>
+      </div>
+      
+      <!--<div id="logo">
+        <img src="https://raw.githubusercontent.com/wordbjt/trcr-demo/master/Your_Logo.png">
+      </div>-->
+      
     </div>
 
     <!-- <p id="description">
@@ -548,7 +564,7 @@ how to remove the virtical space around the range input in IE*/
     const checkoutsuccessMessage = document.querySelector('.js-check-out-success-message')
     const errorMessage = document.querySelector('.js-error-message')
     
-    var logo = document.getElementById('logo')
+    var location = document.getElementById('location')
     var headerTitle = document.getElementById('header-title')
     // var description = document.getElementById('description')
     var checkinBar = document.getElementById('check-in-bar')
@@ -582,7 +598,7 @@ how to remove the virtical space around the range input in IE*/
 
     function showLoadingIndicator () {
       form.classList.add('is-hidden')
-      logo.classList.add('is-hidden')
+      location.classList.add('is-hidden')
       headerTitle.classList.add('is-hidden')
       // description.classList.add('is-hidden')
       checkout.classList.add('is-hidden')
@@ -596,7 +612,7 @@ how to remove the virtical space around the range input in IE*/
         checkinBar.classList.remove('is-hidden')
         checkoutsuccessMessage.classList.add('is-hidden')
         checkoutBar.classList.add('is-hidden')
-        logo.classList.remove('is-hidden')
+        location.classList.remove('is-hidden')
         checkout.classList.remove('is-hidden')
         headerTitle.classList.add('is-hidden')
         // description.classList.add('is-hidden')          
@@ -611,7 +627,7 @@ how to remove the virtical space around the range input in IE*/
         checkinBar.classList.add('is-hidden')
         checkoutsuccessMessage.classList.remove('is-hidden')
         checkoutBar.classList.remove('is-hidden')
-        logo.classList.remove('is-hidden')
+        location.classList.remove('is-hidden')
         checkout.classList.add('is-hidden')
         headerTitle.classList.add('is-hidden')
         // description.classList.add('is-hidden')          
@@ -623,7 +639,7 @@ how to remove the virtical space around the range input in IE*/
       console.error('Error!', error.message)
       setTimeout(() => {
         errorMessage.classList.remove('is-hidden')
-        logo.classList.add('is-hidden')
+        location.classList.add('is-hidden')
         headerTitle.classList.add('is-hidden')
         // description.classList.add('is-hidden') 
         checkout.classList.add('is-hidden')
