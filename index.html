@@ -97,6 +97,13 @@
     #business-name h2 {
       
     }
+  
+    h3.form-title {
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center; 
+  }
     
     #logo {
       width: 100%;
@@ -342,43 +349,7 @@ how to remove the virtical space around the range input in IE*/
     /*Edge starts the margin from the thumb, not the track as other browsers do*/
   }
 }
-  
-/* ELLIPSIS LOADING */
-  
-  #header-title.ellipsis-loading {
-    font-size: 11px;
-    font-weight: 400;
-    text-align: center;
-    width: 100%;
-  }
-  
- .ellipsis-loading {
-  font-size: 30px;
-  }
 
-.ellipsis-loading:after {
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: bottom;
-  -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
-  animation: ellipsis steps(4,end) 900ms infinite;
-  content: "\2026"; /* ascii code for the ellipsis character */
-  width: 0px;
-}
-
-@keyframes ellipsis {
-  to {
-    width: 1.25em;    
-  }
-}
-
-@-webkit-keyframes ellipsis {
-  to {
-    width: 1.25em;    
-  }
-}
-    
-    
 </style>
   
   
@@ -425,7 +396,7 @@ how to remove the virtical space around the range input in IE*/
     
     <form id="trcr-form" name="submit-to-storage">
       
-      <h3>Visitor Information for Contact Tracing</h3>
+      <h3 class="form-title">Visitor Information for Contact Tracing</h3>
       <!--
       <label id="temperature-label" for="temperature">Temperature:</label> 
       <div id="temperature-wrapper">
