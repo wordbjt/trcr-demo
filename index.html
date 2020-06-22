@@ -99,6 +99,9 @@
       display: block;
     }
   
+  #business-name-wrapper {
+    width:100%;
+  }
     #business-name h2 {
      font-size: 22px;
     }
@@ -228,6 +231,7 @@
       text-align: center;
       background-color: green;
       padding: 10px;
+      width: 100%;
       
     }
     
@@ -238,6 +242,11 @@
       width: 100%;
     }
     
+    #checking-in-bar {
+      /*background-color: #d3dbca;*/
+      background-color: #7ea58b;
+    }
+  
     #check-in-bar {
       /*background-color: #d3dbca;*/
       background-color: #7ea58b;
@@ -459,6 +468,11 @@ how to remove the virtical space around the range input in IE*/
 <header>
 <h1>TRCR</h1>
 </header>
+  
+  
+  <div id="checking-in-bar" class="sucess-bar js-success-bar is-hidden">
+    <p>Checking in to...</p>
+  </div>
   
   <div id="check-in-bar" class="sucess-bar js-success-bar is-hidden">
     <p>Check-in sucessfull!</p>
