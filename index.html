@@ -413,33 +413,15 @@ how to remove the virtical space around the range input in IE*/
   </div>
 
   <div class="form-container">
-    
-    <!--<div class="header-content">
-      <h2 id="header-title">Checking in to...</h2>
-      <h3>Business Name</h3>
-    </div>-->
-    
-    <div id="header-title-wrapper">Checking in to><div id="header-title" class="ellipsis-loading"></div></div>
-    
-
-    
+       
     <div id="business-name-wrapper">
-      
       <div id="business-name">
         <h2>Your Business Name Goes Here</h2>
       </div>
-      
       <!--<div id="logo">
         <img src="https://raw.githubusercontent.com/wordbjt/trcr-demo/master/Your_Logo.png">
       </div> -->
-      
     </div>
-
-    <!-- <p id="description">
-      In an effort to help control and manage the spread of COVID-19, all visitors must complete and submit this form before entering this establishment.
-    <br><br>
-      <em>*All fields are required</em>
-    </p> -->
     
     <form id="trcr-form" name="submit-to-storage">
       
@@ -575,7 +557,6 @@ how to remove the virtical space around the range input in IE*/
     
     var businessName = document.getElementById('business-name-wrapper')
     var headerTitle = document.getElementById('header-title')
-    // var description = document.getElementById('description')
     var checkinBar = document.getElementById('check-in-bar')
     var checkout = document.getElementById('check-out')
     var checkoutBar = document.getElementById('check-out-bar')
@@ -609,7 +590,6 @@ how to remove the virtical space around the range input in IE*/
       form.classList.add('is-hidden')
       businessName.classList.add('is-hidden')
       headerTitle.classList.add('is-hidden')
-      // description.classList.add('is-hidden')
       checkout.classList.add('is-hidden')
       loading.classList.remove('is-hidden')
     }
@@ -624,7 +604,6 @@ how to remove the virtical space around the range input in IE*/
         businessName.classList.remove('is-hidden')
         checkout.classList.remove('is-hidden')
         headerTitle.classList.add('is-hidden')
-        // description.classList.add('is-hidden')          
         loading.classList.add('is-hidden')
       }, 500)
     }
@@ -639,7 +618,6 @@ how to remove the virtical space around the range input in IE*/
         businessName.classList.remove('is-hidden')
         checkout.classList.add('is-hidden')
         headerTitle.classList.add('is-hidden')
-        // description.classList.add('is-hidden')          
         loading.classList.add('is-hidden')
       }, 500)
     }    
@@ -650,7 +628,6 @@ how to remove the virtical space around the range input in IE*/
         errorMessage.classList.remove('is-hidden')
         businessName.classList.add('is-hidden')
         headerTitle.classList.add('is-hidden')
-        // description.classList.add('is-hidden') 
         checkout.classList.add('is-hidden')
         loading.classList.add('is-hidden')
       }, 500)
