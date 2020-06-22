@@ -373,13 +373,9 @@ how to remove the virtical space around the range input in IE*/
 .tgl::selection, .tgl:after::selection, .tgl:before::selection, .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection, .tgl + .tgl-btn::selection {
   background: none;
 }
-  
-.tgl-btn {
-  display:inline-block;  
-  }
-  
+    
 .save-label {
-  display: inline-block;
+  display: block;
   }
   
 .tgl + .tgl-btn {
@@ -548,17 +544,20 @@ how to remove the virtical space around the range input in IE*/
         <em>**Not applicable to COVID-19 frontline workers</em>
       </p>
       
-      <div class="save-info-wrapper">
         <!--<label class="checkbox">
           <input type="checkbox" value="save-info" id="save-info"> Save my details
-        </label>-->
-       <input class="tgl tgl-light" id="save-info" type="checkbox" value="save-info"/>
-       <label class="tgl-btn" for="save-info"></label>
-       <label class="save-label">Save my details</label>
+        </label>-->      
+      
+      <div class="row save-info-wrapper">
+        <div class="column align-bottom"> 
+          <input class="tgl tgl-light" id="save-info" type="checkbox" value="save-info"/>
+          <label class="tgl-btn" for="save-info"></label>
+        </div>
+        <div class="column align-bottom"> 
+          <label class="save-label">Save my details</label>
+        </div>
       </div>
-      
 
-      
       <input type="hidden" name="type" id="type" value="check-in">
       
       <button type="submit" id="submit-button">Check-in <span>⇨</span></button>
