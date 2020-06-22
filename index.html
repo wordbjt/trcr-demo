@@ -373,6 +373,15 @@ how to remove the virtical space around the range input in IE*/
 .tgl::selection, .tgl:after::selection, .tgl:before::selection, .tgl *::selection, .tgl *:after::selection, .tgl *:before::selection, .tgl + .tgl-btn::selection {
   background: none;
 }
+  
+.tgl-btn {
+  display:inline-block;  
+  }
+  
+.save-label {
+  display: inline-block;
+  }
+  
 .tgl + .tgl-btn {
   outline: 0;
   display: block;
@@ -545,6 +554,7 @@ how to remove the virtical space around the range input in IE*/
         </label>-->
        <input class="tgl tgl-light" id="save-info" type="checkbox" value="save-info"/>
        <label class="tgl-btn" for="save-info"></label>
+       <label class="save-label">Save my details</label>
       </div>
       
 
