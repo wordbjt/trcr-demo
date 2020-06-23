@@ -492,6 +492,7 @@ how to remove the virtical space around the range input in IE*/
   <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   
   <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
   <script src="https://unpkg.com/prefixfree@1.0.0/prefixfree.min.js"></script>
   <script src="https://wzrd.in/standalone/formdata-polyfill@latest"></script>
   <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
@@ -789,6 +790,7 @@ console.log(date_string);
   
 </script>
   
+<!--  
 <script>
 $(function() {
 
@@ -829,6 +831,47 @@ $("input[name='phone']").val(localStorage['phone']);
 // }); 
   
 </script>
+
+-->
+  
+<!-- SAVE FORM VALUE IN COOKIE -->
+  
+<script>
+
+$('input#save-info').click(function(){
+            if($(this).is(":checked")){
+            
+   // serialize our part of the form - every input field containing classs "form-input"
+   dataString = $('.form-input').serialize();
+   // set new cookie
+   Cookies.set('trcrformCookie', dataString)
+   console.log("Checkbox is checked.");
+   return false; 
+}
+    else if($(this).is(":not(:checked)")){
+    Cookies.remove('trcrformCookie');
+    console.log("Checkbox is unchecked.");
+}
+});
+
+$(function() {
+   // get serialized string from cookie    
+   cookieData = Cookies.get('trcrformCookie');
+   // if cookie exists continue
+   if (cookieData != null) {
+        // split cookieData string into an array of fields and their values
+        cookieArray = cookieData.split('&');
+        // go through each field and split it too to get field name and it's value
+        $.each(cookieArray, function(k, v) {
+          field = v.split('=');
+          // populate field with data
+          $('#trcr-form [name="'+field[0]+'"]').val(field[1]);
+        });
+    }
+   return false;
+});
+
+</script>  
   
 
 </body>
