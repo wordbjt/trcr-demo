@@ -793,7 +793,7 @@ console.log(date_string);
 </script>
   
  
-<script>
+<!-- <script>
 $(function() {
 
 if (localStorage['name']) {
@@ -833,14 +833,15 @@ $("input[name='phone']").val(localStorage['phone']);
 // }); 
   
 </script>
+-->
 
 
   
 <!-- SAVE FORM VALUE IN COOKIE -->
-<!-- 
+ 
 <script>  
-  
-$('input#save-info').click(function(){
+$('body').on('click','#input#save-info', function() {  
+// $('input#save-info').click(function(){
             if($(this).is(":checked")){
             
    // serialize our part of the form - every input field containing classs "form-input"
@@ -874,7 +875,6 @@ $(function() {
 });  
 
 </script>
--->
   
 
 </body>
