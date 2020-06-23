@@ -838,8 +838,8 @@ $("input[name='phone']").val(localStorage['phone']);
   
 <!-- SAVE FORM VALUE IN COOKIE -->
   
-<script>
-
+<script>  
+  
 $('input#save-info').click(function(){
             if($(this).is(":checked")){
             
@@ -851,11 +851,11 @@ $('input#save-info').click(function(){
    return false; 
 }
     else if($(this).is(":not(:checked)")){
-    Cookies.remove('trcrformCookie');
+    Cookies.remove('trcrformCookie')
     console.log("Checkbox is unchecked.");
 }
 });
-
+  
 $(function() {
    // get serialized string from cookie    
    cookieData = Cookies.get('trcrformCookie');
@@ -871,7 +871,7 @@ $(function() {
         });
     }
    return false;
-});
+});  
 
 </script>
   
