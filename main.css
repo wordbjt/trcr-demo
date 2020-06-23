@@ -63,7 +63,8 @@
     }
 
     input:focus {
-      outline: 1px solid var(--accent);
+      /*outline: 1px solid var(--accent);*/
+      outline: 1px solid var(--blue);
     }
 
     button {
