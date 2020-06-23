@@ -51,7 +51,8 @@
       appearance: none;
       border: none;
       font-size: inherit;
-      background: #eee;
+      /*background: #eee;*/
+      background: #f5f1ee;
       border-radius: 2px;
       padding: 1rem;
       width: 100%;
