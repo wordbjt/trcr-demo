@@ -280,12 +280,13 @@
     }
     
     #display-name {
-     text-align:center;
-     display: block; 
+      text-align:center;
+      text-transform: uppercase;
+      display: block;
     }
     
     #display-date {
-      
+     text-transform: uppercase;
      text-align:center;
      margin-top: 15px;
      display: block;
@@ -549,18 +550,19 @@ how to remove the virtical space around the range input in IE*/
       <label for="name">Full Name:</label>
       <input name="name" type="text" placeholder="Full Name" id="full-name" class="form-input" required>
       
-      <label for="address">Address:</label>
-      <input name="address" type="text" placeholder="Address" required>
+      <label for="address">Street Address:</label>
+      <input name="address" type="text" placeholder="Street Address" required>
       
       <label for="city">City:</label>
       <input name="city" type="text" placeholder="City" required>
-      
+      <!--
       <label for="zip-code">Zip Code:</label>
       <input name="zip-code" type="text" placeholder="Zip Code" required>
-      
+      -->
+      <!--
       <label for="email">Email Address:</label>
       <input name="email" type="email" placeholder="Email" id="email" class="form-input" required>
-      
+      -->
       <label for="phone">Phone Number:</label>
       <input name="phone" type="tel" placeholder="Phone Number" id="phone" class="form-input" required>
       
