@@ -173,8 +173,8 @@
       margin-top: 25px;
       box-shadow: 0 10px 100px 0 #ccc;
       /*min-height: calc(100vh - 155px); */
-      height: calc(100vh - 155px); /* Use vh as a fallback for browsers that do not support Custom Properties */
-      height: calc(var(--vh, 1vh) * 100);
+      min-height: calc(100vh - 155px); /* Use vh as a fallback for browsers that do not support Custom Properties */
+      min-height: calc(var(--vh, 1vh) * 100);
       }
   
   #business-name-wrapper {
