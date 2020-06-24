@@ -619,7 +619,7 @@ how to remove the virtical space around the range input in IE*/
       
         <!--<label class="checkbox">
           <input type="checkbox" value="save-info" id="save-info"> Save my details
-        </label>-->      
+        </label>-->
       
       <div class="row save-info-wrapper">
         <div class="column align-bottom small-width"> 
@@ -688,6 +688,7 @@ how to remove the virtical space around the range input in IE*/
     
     var businessName = document.getElementById('business-name-wrapper')
     var checkinBar = document.getElementById('check-in-bar')
+    var checkoutValue = document.getElementById('type')
     var checkout = document.getElementById('check-out')
     var checkoutBar = document.getElementById('check-out-bar')
     
@@ -731,6 +732,7 @@ how to remove the virtical space around the range input in IE*/
         checkoutsuccessMessage.classList.add('is-hidden')
         checkoutBar.classList.add('is-hidden')
         businessName.classList.remove('is-hidden')
+        checkoutValue.value('check-out')
         checkout.classList.remove('is-hidden')
         loading.classList.add('is-hidden')
       }, 500)
