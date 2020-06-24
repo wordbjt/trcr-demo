@@ -762,6 +762,8 @@ how to remove the virtical space around the range input in IE*/
     const checkoutsuccessMessage = document.querySelector('.js-check-out-success-message')
     const errorMessage = document.querySelector('.js-error-message')
     
+    var headerLogo = document.getElementById('trcr-logo')
+    var footer = document.getElementById('footer')
     var businessName = document.getElementById('business-name-wrapper')
     var checkinBar = document.getElementById('check-in-bar')
     var checkout = document.getElementById('check-out')
@@ -800,6 +802,10 @@ form.addEventListener('submit', e => {
     /* END OF FORM */
 
     function showLoadingIndicator () {
+      headerLogo.classList.add('is-hidden')
+      checkinBar.classList.add('is-hidden')
+      checkoutBar.classList.add('is-hidden')
+      footer.classList.add('is-hidden')
       form.classList.add('is-hidden')
       businessName.classList.add('is-hidden')
       successMessage.classList.add('is-hidden')
