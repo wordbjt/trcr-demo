@@ -29,8 +29,6 @@
     min-height: calc(var(--vh, 1vh) * 100 - 149px);
   } 
   
-  
-  
 }
 
 @media screen and (min-width:641px) {
@@ -578,6 +576,10 @@ how to remove the virtical space around the range input in IE*/
   
 /* SPLASH SCREEN LOADER */
   
+.preload * {
+  transition: none !important;
+}
+  
 .wrapper {
   position: relative;
   height: 100%;
@@ -677,12 +679,24 @@ how to remove the virtical space around the range input in IE*/
   <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
   <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
  
-<script> 
- $(document).ready(function() {
-  setTimeout(function() {
+<script>
+$(document).ready(function () {
+  setTimeout(function () {
     $('.wrapper').addClass('loaded');
-    
+
   }, 3000);
+});
+
+
+
+jQuery(function () {
+
+  $(window).load(function () {
+
+    $('.wrapper').removeClass('preload');
+
+  });
+
 });
 </script>
   
