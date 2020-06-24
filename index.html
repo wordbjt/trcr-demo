@@ -8,7 +8,21 @@
   <meta name="description" content="TRCR - Demo">
   
 <style>
-    
+@media screen and (max-device-width:640px), screen and (max-width:640px) {
+  
+  body {
+   background-color: #FFF; 
+  }
+  
+  body .form-container {
+    max-width: 400px;
+    width: 100%;
+    box-shadow: none;
+  } 
+  
+}
+  
+  
 .row {
   display: flex;
 }
@@ -119,11 +133,6 @@
       display: block;
     }
   
-  body .form-container {
-    max-width: 400px;
-    width: 100%;
-  }
-  
   #business-name-wrapper {
     width:100%;
   }
@@ -171,7 +180,6 @@
       box-shadow: 0 10px 100px 0 #ccc;
     }
   
-      
     .form-container input {
       text-transform: uppercase;
       font-size: 16px;
