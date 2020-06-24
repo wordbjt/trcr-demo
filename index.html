@@ -688,7 +688,7 @@ how to remove the virtical space around the range input in IE*/
     
     var businessName = document.getElementById('business-name-wrapper')
     var checkinBar = document.getElementById('check-in-bar')
-    var checkoutValue = document.getElementById('type')
+    // var checkoutValue = document.getElementById('type')
     var checkout = document.getElementById('check-out')
     var checkoutBar = document.getElementById('check-out-bar')
     
@@ -726,13 +726,14 @@ how to remove the virtical space around the range input in IE*/
 
     function showSuccessMessage (response) {
       console.log('Success!', response)
+      document.getElementById('type').value = 'check-out';
       setTimeout(() => {
         successMessage.classList.remove('is-hidden')
         checkinBar.classList.remove('is-hidden')
         checkoutsuccessMessage.classList.add('is-hidden')
         checkoutBar.classList.add('is-hidden')
         businessName.classList.remove('is-hidden')
-        checkoutValue.val('check-out')
+        //checkoutValue.val('check-out')
         checkout.classList.remove('is-hidden')
         loading.classList.add('is-hidden')
       }, 500)
