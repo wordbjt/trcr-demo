@@ -712,37 +712,29 @@ how to remove the virtical space around the range input in IE*/
     
 // CHECK IF CHECK-IN OR CHECK-OUT
       
-      if ($('input#type').val() == 'check-in') {
-      
-        console.log("Check-in");
-        
-        form.addEventListener('submit', e => {
-        e.preventDefault()
-        showLoadingIndicator()
-        showInput()
-        
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => showSuccessMessage(response))
-        .catch(error => showErrorMessage(error))
-       
-       }) 
-    } 
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    showLoadingIndicator()
     
-
-        if ($('input#type').val() == 'check-out') {
+        if ($('input#type').val() == 'check-in') {
+            showInput()
+            console.log("Check-in");
         
-        console.log("Check-out");
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => showSuccessMessage(response))
+            .catch(error => showErrorMessage(error))
+        }
+        else 
+        {
+            showInputcheckout()
+            console.log("Check-out");
+            
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => showCheckOutMessage(response))
+            .catch(error => showErrorMessage(error))
+        }
         
-        form.addEventListener('submit', e => {
-        e.preventDefault()
-        showLoadingIndicator()
-        showInputcheckout()
-      
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => showCheckOutMessage(response))
-        .catch(error => showErrorMessage(error))
-        })
-    }
+ })
     
     /* END OF FORM */
 
