@@ -818,6 +818,8 @@ form.addEventListener('submit', e => {
       document.getElementById('type').value = 'check-out';
       setTimeout(() => {
         successMessage.classList.remove('is-hidden')
+        headerLogo.classList.remove('is-hidden')
+        footer.classList.remove('is-hidden')
         checkinBar.classList.remove('is-hidden')
         checkoutsuccessMessage.classList.add('is-hidden')
         checkoutBar.classList.add('is-hidden')
@@ -831,6 +833,8 @@ form.addEventListener('submit', e => {
       console.log('Check Out Success!', response)
       setTimeout(() => {
         successMessage.classList.add('is-hidden')
+        headerLogo.classList.remove('is-hidden')
+        footer.classList.remove('is-hidden')
         checkinBar.classList.add('is-hidden')
         checkoutsuccessMessage.classList.remove('is-hidden')
         checkoutBar.classList.remove('is-hidden')
@@ -844,6 +848,8 @@ form.addEventListener('submit', e => {
       console.error('Error!', error.message)
       setTimeout(() => {
         errorMessage.classList.remove('is-hidden')
+        headerLogo.classList.remove('is-hidden')
+        footer.classList.remove('is-hidden')
         businessName.classList.add('is-hidden')
         checkout.classList.add('is-hidden')
         loading.classList.add('is-hidden')
