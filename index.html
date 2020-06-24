@@ -805,10 +805,10 @@ var date_string = YYYY + "-" + MM + "-" + DD + " " + hh + ":" + mm + ":" + ss;
 console.log(date_string);    
     
     function showInput() {
-        document.getElementByClassName('display-name').innerHTML = 
+        document.getElementsByClassName('display-name').innerHTML = 
                     document.getElementById("full-name").value;
       
-        document.getElementByClassName('display-date').innerHTML = date_string;     
+        document.getElementsByClassName('display-date').innerHTML = date_string;     
     }
   
 </script>
