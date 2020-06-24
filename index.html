@@ -574,7 +574,8 @@ how to remove the virtical space around the range input in IE*/
   position: fixed;
   display: flex;
   align-items: center;
-  justify-content: center;	
+  justify-content: center;
+  opacity: 1;
   z-index: 9999;
   }
 	
@@ -593,6 +594,15 @@ how to remove the virtical space around the range input in IE*/
 #loader svg {
  width: 100px;
  height: 100px;
+}
+	
+.loaded {
+visibility: hidden;
+opacity: 0;
+    -webkit-transition: opacity 3s ease-in-out;
+    -moz-transition: opacity 3s ease-in-out;
+    -ms-transition: opacity 3s ease-in-out;
+    -o-transition: opacity 3s ease-in-out;	
 }
   
 </style>
