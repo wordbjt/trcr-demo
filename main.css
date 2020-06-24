@@ -43,8 +43,8 @@
       text-align: left;
       width: 350px;
       min-height: 300px;
-      margin: 0 auto;
-      box-shadow: 0 10px 50px 0 #ccc;
+      margin: 25px auto 0;
+      /*box-shadow: 0 10px 50px 0 #ccc;*/
       margin-bottom: 2rem;
     }
 
