@@ -842,8 +842,8 @@ $("input[name='phone']").val(localStorage['phone']);
 <script>  
  $('form').on('click','input#save-info', function() {  
 // $('input#save-info').click(function(){
-             if($(this).is(":checked")){
-            //if ($('input.checkbox_check').is(':checked')) {
+             // if($(this).is(":checked")){
+            if ($('input#save-info').is(':checked')) {
    // serialize our part of the form - every input field containing classs "form-input"
    dataString = $('.form-input').serialize();
    // set new cookie
@@ -851,7 +851,9 @@ $("input[name='phone']").val(localStorage['phone']);
    console.log("Checkbox is checked.");
    return false; 
 }
-    else if($(this).is(":not(:checked)")){
+    else 
+      // if($(this).is(":not(:checked)")){
+      if ($('input#save-info').is(':not(:checked)')) {
     Cookies.remove('trcrformCookie')
     console.log("Checkbox is unchecked.");
 }
