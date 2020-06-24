@@ -840,10 +840,10 @@ $("input[name='phone']").val(localStorage['phone']);
 <!-- SAVE FORM VALUE IN COOKIE -->
  
 <script>  
- $('form').on('click','#input#save-info', function() {  
+ $('form').on('click','input#save-info', function() {  
 // $('input#save-info').click(function(){
-            if($(this).is(":checked")){
-            
+             if($(this).is(":checked")){
+            //if ($('input.checkbox_check').is(':checked')) {
    // serialize our part of the form - every input field containing classs "form-input"
    dataString = $('.form-input').serialize();
    // set new cookie
