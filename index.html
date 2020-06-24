@@ -315,13 +315,15 @@
     position: relative;
     }
     
-    .display-name {
+    #display-name,
+   #checkout-display-name {
       text-align:center;
       text-transform: uppercase;
       display: block;
     }
     
-    .display-date {
+    #display-date,
+    #checkout-display-date {
      text-transform: uppercase;
      text-align:center;
      margin-top: 15px;
@@ -660,8 +662,8 @@ how to remove the virtical space around the range input in IE*/
       <h1>ENTRY PASS</h1>
       <p>Please screenshot and save for your records.</p>
       <img src="https://raw.githubusercontent.com/wordbjt/trcr-demo/master/trcr_pass_confirmed.png">
-      <span class="display-name"></span>
-      <span class="display-date"></span>
+      <span id="display-name"></span>
+      <span id="display-date"></span>
       
       <!-- <a id="additional-visitor" href="/">Submit form for an additional visitor.</a> -->
       
@@ -671,8 +673,8 @@ how to remove the virtical space around the range input in IE*/
       <h1>EXIT PASS</h1>
       <p>Please screenshot and save for your records.</p>
       <img src="https://raw.githubusercontent.com/wordbjt/trcr-demo/master/trcr_pass_confirmed.png">
-      <span class="display-name"></span>
-      <span class="display-date"></span>
+      <span id="checkout-display-name"></span>
+      <span id="checkout-display-date"></span>
     </div>
     
     
@@ -721,7 +723,8 @@ how to remove the virtical space around the range input in IE*/
         .catch(error => showErrorMessage(error))
         
     } else {
-    
+        
+        showInputcheckout()
         console.log("Check-out");
       
         fetch(scriptURL, { method: 'POST', body: new FormData(form)})
@@ -802,13 +805,24 @@ var ss = ("0" + dt.getSeconds()).slice(-2);
 var date_string = YYYY + "-" + MM + "-" + DD + " " + hh + ":" + mm + ":" + ss;
 
 // will output something like "2019-02-14 11:04:42"
-console.log(date_string);    
-    
+console.log(date_string);
+ 
+// Check-in details
+  
     function showInput() {
-        document.getElementsByClassName('display-name').innerHTML = 
+        document.getElementById('display-name').innerHTML = 
                     document.getElementById("full-name").value;
       
-        document.getElementsByClassName('display-date').innerHTML = date_string;     
+        document.getElementById('display-date').innerHTML = date_string;     
+    }
+  
+// Check-out details
+  
+    function showInputcheckout() {
+        document.getElementById('checkout-display-name').innerHTML = 
+                    document.getElementById("full-name").value;
+      
+        document.getElementById('checkout-display-date').innerHTML = date_string;     
     }
   
 </script>
