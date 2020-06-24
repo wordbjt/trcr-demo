@@ -282,8 +282,8 @@
       text-align: center;
       background-color: #6a8a9f;
       padding: 15px 10px;
-      width: 100%; 
-      border-radius: 2px;  
+      width: 100%;
+      border-radius: 2px;
     }
     
     #checking-in-bar {
@@ -700,6 +700,7 @@ how to remove the virtical space around the range input in IE*/
     // var checkoutValue = document.getElementById('type')
     var checkout = document.getElementById('check-out')
     var checkoutBar = document.getElementById('check-out-bar')
+    // var footer = document.getElementById('footer')
     
     form.addEventListener('submit', e => {
       e.preventDefault()
@@ -729,6 +730,7 @@ how to remove the virtical space around the range input in IE*/
     function showLoadingIndicator () {
       form.classList.add('is-hidden')
       businessName.classList.add('is-hidden')
+      successMessage.classList.add('is-hidden')
       checkout.classList.add('is-hidden')
       loading.classList.remove('is-hidden')
     }
