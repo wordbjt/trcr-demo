@@ -725,10 +725,11 @@ how to remove the virtical space around the range input in IE*/
         .then(response => showSuccessMessage(response))
         .catch(error => showErrorMessage(error))
        
-       })
-       
-       
-    } else {
+       }) 
+    } 
+    
+
+        if ($('input#type').val() == 'check-out') {
         
         console.log("Check-out");
         
