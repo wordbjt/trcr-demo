@@ -315,13 +315,13 @@
     position: relative;
     }
     
-    #display-name {
+    .display-name {
       text-align:center;
       text-transform: uppercase;
       display: block;
     }
     
-    #display-date {
+    .display-date {
      text-transform: uppercase;
      text-align:center;
      margin-top: 15px;
@@ -660,8 +660,8 @@ how to remove the virtical space around the range input in IE*/
       <h1>ENTRY PASS</h1>
       <p>Please screenshot and save for your records.</p>
       <img src="https://raw.githubusercontent.com/wordbjt/trcr-demo/master/trcr_pass_confirmed.png">
-      <span id="display-name"></span>
-      <span id="display-date"></span>
+      <span class="display-name"></span>
+      <span class="display-date"></span>
       
       <!-- <a id="additional-visitor" href="/">Submit form for an additional visitor.</a> -->
       
@@ -671,8 +671,8 @@ how to remove the virtical space around the range input in IE*/
       <h1>EXIT PASS</h1>
       <p>Please screenshot and save for your records.</p>
       <img src="https://raw.githubusercontent.com/wordbjt/trcr-demo/master/trcr_pass_confirmed.png">
-      <span id="display-name"></span>
-      <span id="display-date"></span>
+      <span class="display-name"></span>
+      <span class="display-date"></span>
     </div>
     
     
@@ -754,15 +754,6 @@ how to remove the virtical space around the range input in IE*/
     
     function showCheckOutMessage (response) {
       console.log('Check Out Success!', response)
-      
-          function showInput() {
-        document.getElementById('display-name').innerHTML = 
-                document.getElementById("full-name").value;
-      
-        document.getElementById('display-date').innerHTML = date_string;     
-    }
-      
-      
       setTimeout(() => {
         successMessage.classList.add('is-hidden')
         checkinBar.classList.add('is-hidden')
@@ -814,10 +805,10 @@ var date_string = YYYY + "-" + MM + "-" + DD + " " + hh + ":" + mm + ":" + ss;
 console.log(date_string);    
     
     function showInput() {
-        document.getElementById('display-name').innerHTML = 
+        document.getElementByClassName('display-name').innerHTML = 
                     document.getElementById("full-name").value;
       
-        document.getElementById('display-date').innerHTML = date_string;     
+        document.getElementByClassName('display-date').innerHTML = date_string;     
     }
   
 </script>
