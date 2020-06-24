@@ -286,10 +286,8 @@
       border-radius: 2px;
     }
   
-    .js-check-out-success-message h3 {
+    .js-check-out-success-message h1 {
       color: #FFF;
-      text-transform: uppercase;
-      
     }
     
     #checking-in-bar {
@@ -703,7 +701,6 @@ how to remove the virtical space around the range input in IE*/
     
     var businessName = document.getElementById('business-name-wrapper')
     var checkinBar = document.getElementById('check-in-bar')
-    // var checkoutValue = document.getElementById('type')
     var checkout = document.getElementById('check-out')
     var checkoutBar = document.getElementById('check-out-bar')
     // var footer = document.getElementById('footer')
@@ -750,7 +747,6 @@ how to remove the virtical space around the range input in IE*/
         checkoutsuccessMessage.classList.add('is-hidden')
         checkoutBar.classList.add('is-hidden')
         businessName.classList.remove('is-hidden')
-        //checkoutValue.val('check-out')
         checkout.classList.remove('is-hidden')
         loading.classList.add('is-hidden')
       }, 500)
@@ -758,6 +754,15 @@ how to remove the virtical space around the range input in IE*/
     
     function showCheckOutMessage (response) {
       console.log('Check Out Success!', response)
+      
+          function showInput() {
+        document.getElementById('display-name').innerHTML = 
+                document.getElementById("full-name").value;
+      
+        document.getElementById('display-date').innerHTML = date_string;     
+    }
+      
+      
       setTimeout(() => {
         successMessage.classList.add('is-hidden')
         checkinBar.classList.add('is-hidden')
