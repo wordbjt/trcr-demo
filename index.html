@@ -793,14 +793,21 @@ console.log(date_string);
 </script>
   
  
-<!-- <script>
+<script>
 $(function() {
 
 if (localStorage['name']) {
 $("input[name='name']").val(localStorage['name']);
 }
-if (localStorage['email']) {
-$("input[name='email']").val(localStorage['email']);
+  
+if (localStorage['address']) {
+$("input[name='address']").val(localStorage['address']);
+}
+  
+if (localStorage['city']) {
+$("input[name='city']").val(localStorage['city']);
+}
+
 }
 if (localStorage['phone']) {
 $("input[name='phone']").val(localStorage['phone']);
@@ -833,12 +840,15 @@ $("input[name='phone']").val(localStorage['phone']);
 // }); 
   
 </script>
--->
 
-
+<script> 
+$( document ).ready(function() {
+Cookies.remove('trcrformCookie')
+});  
+</scrip>
   
 <!-- SAVE FORM VALUE IN COOKIE -->
- 
+<!-- 
 <script>  
  $('form').on('click','input#save-info', function() {  
 // $('input#save-info').click(function(){
@@ -877,7 +887,7 @@ $(function() {
 });  
 
 </script>
-  
+-->  
 
 </body>
 </html>
