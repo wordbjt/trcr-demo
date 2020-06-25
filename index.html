@@ -182,7 +182,8 @@
   
       .form-container {
       margin-top: 25px;
-      box-shadow: 0 10px 100px 0 #ccc;
+      box-shadow: none;      
+      /*box-shadow: 0 10px 100px 0 #ccc;*/
       /*min-height: calc(100vh - 155px); */
       min-height: calc(100vh - 159px); /* Use vh as a fallback for browsers that do not support Custom Properties */
       min-height: calc(var(--vh, 1vh) * 100 - 159px);
@@ -622,11 +623,9 @@ how to remove the virtical space around the range input in IE*/
 
 <div id="splash" class="row wrapper">
   <div id="splash-wrapper">
-  
     <div id="loader" class="loading-spinner">
 <svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="400" viewBox="0, 0, 400,400"><g id="svgg"><path id="path0" d="M227.600 65.800 L 227.600 96.200 265.500 96.200 L 303.400 96.200 303.400 134.500 L 303.400 172.800 333.800 172.800 L 364.200 172.800 364.200 104.100 L 364.200 35.400 295.900 35.400 L 227.600 35.400 227.600 65.800 " stroke="none" fill="#ec8c74" fill-rule="evenodd"></path><path id="path1" d="M35.400 104.100 L 35.400 172.400 65.800 172.400 L 96.200 172.400 96.200 134.500 L 96.200 96.600 134.500 96.600 L 172.800 96.600 172.800 66.200 L 172.800 35.800 104.100 35.800 L 35.400 35.800 35.400 104.100 " stroke="none" fill="#ecb454" fill-rule="evenodd"></path><path id="path2" d="M303.726 228.050 C 303.660 228.298,303.604 245.353,303.603 265.950 L 303.600 303.400 265.400 303.400 L 227.200 303.400 227.200 333.800 L 227.200 364.200 295.900 364.200 L 364.600 364.200 364.600 295.900 L 364.600 227.600 334.223 227.600 L 303.847 227.600 303.726 228.050 " stroke="none" fill="#849c94" fill-rule="evenodd"></path><path id="path3" d="M35.800 295.900 L 35.800 364.600 104.100 364.600 L 172.400 364.600 172.400 334.200 L 172.400 303.800 134.500 303.800 L 96.600 303.800 96.600 265.500 L 96.600 227.200 66.200 227.200 L 35.800 227.200 35.800 295.900 " stroke="none" fill="#445464" fill-rule="evenodd"></path></g></svg>   
     </div>
-    
    </div>
 </div>
   
@@ -668,17 +667,9 @@ how to remove the virtical space around the range input in IE*/
     
     <form id="trcr-form" name="submit-to-storage">
       
-      <h3 class="form-title">Visitor Information for Contact Tracing</h3>
-      <!--
-      <label id="temperature-label" for="temperature">Temperature:</label> 
-      <div id="temperature-wrapper">
-        <output name="temperatureOutput" id="temperatureOutput">36.5</output><span> °C</span>
-      </div>
-      
-      <input type="range" name="temperature" id="temperature"  min="33" max="40" step="0.1" value="36.5" oninput="temperatureOutput.value = temperature.value" required>      
-      -->
-      
-      <div class="row">
+      <h3 class="form-title">Visitor Information for Contact Tracing</h3> 
+	    
+      <div id="temperature-content" class="row">
         <div class="column align-bottom">
         <label id="temperature-label" for="temperature">Temperature:</label>
         </div>
